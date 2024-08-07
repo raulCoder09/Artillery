@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    public static bool blockShoot;
     [SerializeField] private GameObject bullet;
     private GameObject _shooter;
     private float _rotation;
-    private bool _onDownKey; //provisional
     private void Start()
     {
         _shooter = transform.Find("Shooter").gameObject;
@@ -20,17 +20,18 @@ public class Cannon : MonoBehaviour
         }
         if (_rotation > 90) _rotation = 90;
         if (_rotation < 0) _rotation = 0;
-        if (Input.GetKey(KeyCode.Space) && !_onDownKey)
+        if (Input.GetKey(KeyCode.Space) && !blockShoot)
         {
             
             var temp = Instantiate(bullet, _shooter.transform.position, transform.rotation);
             var tempRb = temp.GetComponent<Rigidbody>();
+            FollowCamera.target = temp;
             var shooterDirection = transform.rotation.eulerAngles;
             shooterDirection.y = 90 - shooterDirection.x;
             tempRb.linearVelocity = shooterDirection.normalized * GameManager.speedBall;
-            _onDownKey = true;
-        }else if(!Input.GetKey(KeyCode.Space))_onDownKey = false;
-
+            blockShoot = true;
+        }
+        
     }
     
 }
