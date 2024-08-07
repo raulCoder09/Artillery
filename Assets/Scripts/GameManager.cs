@@ -4,11 +4,23 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
-    public static int speedBall=30;
+    private static int _speedBall=30;
+    internal static int SpeedBall
+    {
+        get => _speedBall;
+        set => _speedBall = value;
+    }
 
-    public static int shootsByGame=10;
+    private static int _shootsByGame=10;
+    internal static int ShootsByGame
+    {
+        get => _shootsByGame;
+        set => _shootsByGame = value;
+    }
+    
 
     public static float speedRotation=1f;
+    
     private void Awake()
     {
         if (gameManager==null)
