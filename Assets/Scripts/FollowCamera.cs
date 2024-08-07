@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
@@ -23,6 +22,7 @@ public class FollowCamera : MonoBehaviour
         if (target==null)
         {
             destiny=Vector3.zero;
+            Cannon.blockShoot = false;
         }
         else
         {
