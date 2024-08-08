@@ -37,14 +37,14 @@ public class FollowCamera : MonoBehaviour
                     Cannon.blockShoot = false;
                     return;
                 }
-                destiny.x = Mathf.Max(limitXY.x, destiny.x);
-                destiny.y = Mathf.Max(limitXY.y, destiny.y);
-                destiny=Vector3.Lerp(transform.position, destiny, smoothing);
-                destiny.z = cameraZ;
-                transform.position = destiny;
-                if (Camera.main!=null) Camera.main.orthographicSize = destiny.y + 20;
             }
         }
+        destiny.x = Mathf.Max(limitXY.x, destiny.x);
+        destiny.y = Mathf.Max(limitXY.y, destiny.y);
+        destiny=Vector3.Lerp(transform.position, destiny, smoothing);
+        destiny.z = cameraZ;
+        transform.position = destiny;
+        if (Camera.main!=null) Camera.main.orthographicSize = destiny.y + 20;
     }
 
 }
