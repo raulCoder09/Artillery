@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e34281f0bf3944ee8f8952fd019bf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shoots: 4
 --- !u!4 &530085567
 Transform:
   m_ObjectHideFlags: 0
@@ -1047,6 +1048,7 @@ MonoBehaviour:
   bullet: {fileID: 7740048234480873115, guid: 09ea7860954d2444886ed311ad723894, type: 3}
   bulletSpecial: {fileID: 7740048234480873115, guid: 64797068a0d12466da4a3bcab4bcdde4, type: 3}
   gunFlash: {fileID: 7569873436497841351, guid: 5ab660859c94a4f55b8ad298e84b8be4, type: 3}
+  burst: {fileID: 8037520509159595607, guid: dd70557b80ed74136aa4173ef53e7a8f, type: 3}
 --- !u!54 &1983852025
 Rigidbody:
   m_ObjectHideFlags: 0

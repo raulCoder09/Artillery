@@ -8,6 +8,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject bulletSpecial;
     [SerializeField] private GameObject gunFlash;
+    [SerializeField] private GameObject burst;
     private GameObject _temp;
     private List<GameObject> _bullets= new List<GameObject>();
     private GameObject _shooter;
@@ -65,6 +66,7 @@ public class Cannon : MonoBehaviour
         {
             if (_bullets[i] != null && _bullets[i].transform.position.y < -20)
             {
+                Instantiate(burst, _temp.transform.position, transform.rotation);
                 Destroy(_bullets[i]);
                 _bullets.RemoveAt(i);
             }
