@@ -8,6 +8,11 @@ TagManager:
   - Floor
   - Object
   - Enemy
+  - Target
+  - Obstacle
+  - Burst
+  - SpecialBurst
+  - SpecialBullet
   layers:
   - Default
   - TransparentFX

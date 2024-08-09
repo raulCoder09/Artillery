@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5074868104374610696}
   - component: {fileID: -4229878665945236348}
   m_Layer: 0
-  m_Name: BulletSpecial
-  m_TagString: Bullet
+  m_Name: SpecialBullet
+  m_TagString: SpecialBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7740048234480873115}
-  m_Material: {fileID: 13400000, guid: 9e444ee9d7703452b99d49eb39b33357, type: 2}
+  m_Material: {fileID: 13400000, guid: e2153c81c64e44f37b7c39ef36d19617, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -149,4 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9acb44064042462dbeb329ea4cdb901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  burst: {fileID: 8037520509159595607, guid: dd70557b80ed74136aa4173ef53e7a8f, type: 3}
+  burst: {fileID: 8037520509159595607, guid: fc90d3f3f791a4c58a6e3477343d7227, type: 3}
