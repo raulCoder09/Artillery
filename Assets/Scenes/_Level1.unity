@@ -1045,6 +1045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7740048234480873115, guid: 09ea7860954d2444886ed311ad723894, type: 3}
+  bulletSpecial: {fileID: 7740048234480873115, guid: 64797068a0d12466da4a3bcab4bcdde4, type: 3}
+  gunFlash: {fileID: 7569873436497841351, guid: 5ab660859c94a4f55b8ad298e84b8be4, type: 3}
 --- !u!54 &1983852025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1068,7 +1070,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1

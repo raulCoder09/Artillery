@@ -6,6 +6,9 @@ public class Cannon : MonoBehaviour
     public static bool blockShoot;
     
     [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject bulletSpecial;
+    [SerializeField] private GameObject gunFlash;
+    private GameObject _temp;
     private List<GameObject> _bullets= new List<GameObject>();
     private GameObject _shooter;
     private float _rotation;
@@ -24,15 +27,26 @@ public class Cannon : MonoBehaviour
         if (_rotation < 0) _rotation = 0;
         if (GameManager.ShootsByGame>0)
         {
-            if (Input.GetKey(KeyCode.Space) && !blockShoot)
+            if (Input.GetKey(KeyCode.Space)&& !blockShoot)
             {
                 GameManager.ShootsByGame--;
-                var temp = Instantiate(bullet, _shooter.transform.position, transform.rotation);
-                _bullets.Add(temp);
-                var tempRb = temp.GetComponent<Rigidbody>();
-                FollowCamera.target = temp;
+                if (GameManager.ShootsByGame<2)
+                {
+                    _temp = Instantiate(bulletSpecial, _shooter.transform.position, transform.rotation);
+                }
+                else
+                {
+                    _temp = Instantiate(bullet, _shooter.transform.position, transform.rotation);
+                }
+                
+                
+                _bullets.Add(_temp);
+                var tempRb = _temp.GetComponent<Rigidbody>();
+                FollowCamera.target = _temp;
                 var shooterDirection = transform.rotation.eulerAngles;
                 shooterDirection.y = 90 - shooterDirection.x;
+                var gunFlashDirection = new Vector3(-90 + shooterDirection.x, 90, 0);
+                var flash = Instantiate(gunFlash, _shooter.transform.position, Quaternion.Euler(gunFlashDirection));
                 tempRb.linearVelocity = shooterDirection.normalized * GameManager.SpeedBall;
                 blockShoot = true;
                 print($"shots available: {GameManager.ShootsByGame}");
