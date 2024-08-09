@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e34281f0bf3944ee8f8952fd019bf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoots: 4
+  shoots: 10
 --- !u!4 &530085567
 Transform:
   m_ObjectHideFlags: 0
@@ -893,6 +893,68 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3400953273696924981, guid: d9a2e82a1b88b264b8462f31e0074ee2, type: 3}
   m_PrefabInstance: {fileID: 1885772355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1873128787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 791214710690871042, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_Name
+      value: BurstSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572060880331289962, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+--- !u!1 &1873128788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 791214710690871042, guid: 9f7d48e1d107c4b709974a3896d4ed77, type: 3}
+  m_PrefabInstance: {fileID: 1873128787}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1885772355
 PrefabInstance:
@@ -1028,6 +1090,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d9a2e82a1b88b264b8462f31e0074ee2, type: 3}
   m_PrefabInstance: {fileID: 1885772355}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1905943537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240242722095726120, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873747431296309230, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+      propertyPath: m_Name
+      value: CannonShootSound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+--- !u!1 &1905943538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8873747431296309230, guid: fd5a9b9456a5b4c28b4c45a5971fe1fe, type: 3}
+  m_PrefabInstance: {fileID: 1905943537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1983852020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3447353503332319527, guid: d9a2e82a1b88b264b8462f31e0074ee2, type: 3}
@@ -1049,6 +1173,8 @@ MonoBehaviour:
   bulletSpecial: {fileID: 7740048234480873115, guid: 64797068a0d12466da4a3bcab4bcdde4, type: 3}
   gunFlash: {fileID: 7569873436497841351, guid: 5ab660859c94a4f55b8ad298e84b8be4, type: 3}
   burst: {fileID: 8037520509159595607, guid: dd70557b80ed74136aa4173ef53e7a8f, type: 3}
+  burstSound: {fileID: 1873128788}
+  shootCannonSound: {fileID: 1905943538}
 --- !u!54 &1983852025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1107,3 +1233,5 @@ SceneRoots:
   - {fileID: 402898}
   - {fileID: 530085567}
   - {fileID: 287526897}
+  - {fileID: 1873128787}
+  - {fileID: 1905943537}

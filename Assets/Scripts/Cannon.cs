@@ -9,6 +9,12 @@ public class Cannon : MonoBehaviour
     [SerializeField] private GameObject bulletSpecial;
     [SerializeField] private GameObject gunFlash;
     [SerializeField] private GameObject burst;
+
+    [SerializeField] private GameObject burstSound;
+    private AudioSource _burstAudioSource;
+    [SerializeField] private GameObject shootCannonSound;
+    private AudioSource _shootCannonAudioSource;
+    
     private GameObject _temp;
     private List<GameObject> _bullets= new List<GameObject>();
     private GameObject _shooter;
@@ -16,6 +22,8 @@ public class Cannon : MonoBehaviour
     private void Start()
     {
         _shooter = transform.Find("Shooter").gameObject;
+        _shootCannonAudioSource = shootCannonSound.GetComponent<AudioSource>();
+        _burstAudioSource = burstSound.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -30,32 +38,19 @@ public class Cannon : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space)&& !blockShoot)
             {
+                _shootCannonAudioSource.Play();
                 GameManager.ShootsByGame--;
-                if (GameManager.ShootsByGame<2)
-                {
-                    _temp = Instantiate(bulletSpecial, _shooter.transform.position, transform.rotation);
-                }
-                else
-                {
-                    _temp = Instantiate(bullet, _shooter.transform.position, transform.rotation);
-                }
-                
-                
+                _temp = Instantiate(GameManager.ShootsByGame<2 ? bulletSpecial : bullet, _shooter.transform.position, transform.rotation);
                 _bullets.Add(_temp);
                 var tempRb = _temp.GetComponent<Rigidbody>();
                 FollowCamera.target = _temp;
                 var shooterDirection = transform.rotation.eulerAngles;
                 shooterDirection.y = 90 - shooterDirection.x;
                 var gunFlashDirection = new Vector3(-90 + shooterDirection.x, 90, 0);
-                var flash = Instantiate(gunFlash, _shooter.transform.position, Quaternion.Euler(gunFlashDirection));
+                Instantiate(gunFlash, _shooter.transform.position, Quaternion.Euler(gunFlashDirection));
                 tempRb.linearVelocity = shooterDirection.normalized * GameManager.SpeedBall;
                 blockShoot = true;
-                print($"shots available: {GameManager.ShootsByGame}");
             }
-        }
-        else
-        {
-            print("You dont have more shoots");
         }
         CheckBulletsOutRange();
     }
@@ -66,6 +61,7 @@ public class Cannon : MonoBehaviour
         {
             if (_bullets[i] != null && _bullets[i].transform.position.y < -20)
             {
+                _burstAudioSource.Play();
                 Instantiate(burst, _temp.transform.position, transform.rotation);
                 Destroy(_bullets[i]);
                 _bullets.RemoveAt(i);
