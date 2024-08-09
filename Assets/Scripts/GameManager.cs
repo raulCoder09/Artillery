@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
         get => _speedBall;
         set => _speedBall = value;
     }
-
-    private static int _shootsByGame=10;
+    [SerializeField] private int shoots=3; 
+    private static int _shootsByGame;
     internal static int ShootsByGame
     {
         get => _shootsByGame;
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
+        _shootsByGame = shoots;
         if (gameManager==null)
         {
             gameManager = this;
