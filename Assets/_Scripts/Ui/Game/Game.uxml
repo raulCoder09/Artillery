@@ -1,0 +1,31 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Game/Game.uss?fileID=7433441132597879392&amp;guid=0dfb51bb9554e435da93429d9467bda9&amp;type=3#Game" />
+    <engine:VisualElement name="Container" id="Container" class="Container">
+        <engine:VisualElement name="Header" id="Header" class="Header">
+            <engine:VisualElement name="ShotsAvailablePanel" id="ShotsAvailablePanel" class="ShotsAvailablePanel">
+                <engine:Label name="ShotsAvailable" id="ShotsAvailable" text="Shots Available: 10" class="ShotsAvailable" />
+            </engine:VisualElement>
+            <engine:VisualElement name="ButtonsPanel" id="ButtonsPanel" class="ButtonsPanel">
+                <engine:Button name="ButtonMenu" id="ButtonMenu" text="Pause" class="ButtonMenu" />
+            </engine:VisualElement>
+            <engine:VisualElement name="ScorePanel" id="ScorePanel" class="ScorePanel">
+                <engine:Label name="HighScore" id="HighScore" text="High Score: 0" class="HighScore" />
+                <engine:Label name="CurrentScore" id="CurrentScore" text="Current Score: 0" class="CurrentScore" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" id="Body" class="Body">
+            <engine:VisualElement name="GamePanel" id="GamePanel" class="GamePanel" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" id="Footer" class="Footer">
+            <engine:VisualElement name="PowerCannonPanel" class="PowerCannonPanel">
+                <engine:SliderInt name="PowerCannon" high-value="30" low-value="5" value="15" class="PowerCannon" />
+            </engine:VisualElement>
+            <engine:VisualElement name="LevelPanel" class="LevelPanel">
+                <engine:Label name="Level" text="Level : 1" class="Level" />
+            </engine:VisualElement>
+            <engine:VisualElement name="PowerEnemyPanel" class="PowerEnemyPanel">
+                <engine:Label name="PowerEnemy" text="Power enemy : 10" class="PowerEnemy" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

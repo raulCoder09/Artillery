@@ -1,0 +1,16 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Loser/Loser.uss?fileID=7433441132597879392&amp;guid=0e207bca8dacf4529a6667471ec3bdb9&amp;type=3#Loser" />
+    <engine:VisualElement name="Container" xml:id="Container" class="Container">
+        <engine:VisualElement name="Header" xml:id="Header" class="Header" >
+            <engine:Label name="Score" xml:id="Score" class="Score" text="Your score: 0"/>
+            <engine:Label name="HighScoreLevel" xml:id="HighScoreLevel" class="HighScoreLevel" text="High score level: 0"/>
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" xml:id="Body" class="Body">
+            <engine:Label name="Message" xml:id="Message" class="Message" text="You lose!!!"/>
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" xml:id="Footer" class="Footer">
+            <engine:Button name="TryAgain" xml:id="TryAgain" class="TryAgain" text="Try again?"/>
+            <engine:Button name="Exit" xml:id="Exit" class="Exit" text="Exit"/>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

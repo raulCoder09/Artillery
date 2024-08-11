@@ -1,0 +1,101 @@
+.Container
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+.Header
+{
+    flex-grow: 1;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    justify-content: space-evenly;
+}
+
+.Lives
+{
+    flex-grow: 0;
+    height: 30%;
+    width: 10%;
+    flex-shrink: 1;
+    background-color: rgb(255, 0, 0);
+    margin: 3%;
+}
+.Number
+{
+    width: 25%;
+    height: 100%;
+    -unity-text-align: middle-center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+.ShotsAvailable
+{
+    color: rgb(255, 255, 255);
+}
+.ButtonsPanel
+{
+    flex-grow: 1;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+.ButtonMenu
+{
+    font-size: 12px;
+    width: 30%;
+    height: 25%;
+}
+.ScorePanel
+{
+    flex-grow: 1;
+    width: 33.3%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+.HighScore
+{
+    color: rgb(255, 255, 255);
+}
+.CurrentScore
+{
+    color: rgb(255, 255, 255);
+}
+.Body
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 80%;
+}
+.Footer{
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+
+.PowerCannonPanel{
+    justify-content: flex-end;
+    width: 33%;
+}
+.LevelPanel{
+    justify-content: flex-end;
+    width: 33%;
+}
+.PowerEnemyPanel{
+    justify-content: flex-end;
+    width: 33%;
+}
+.GamePanel
+{
+    flex-grow: 1;
+}

@@ -1,0 +1,20 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Welcome/Welcome.uss?fileID=7433441132597879392&amp;guid=c32275a8a510040f09ac050d61fb6e37&amp;type=3#Welcome" />
+    <engine:VisualElement name="Container" xml:id="Container" class="Container" >
+        <engine:VisualElement name="Header" xml:id="Header" class="Header">
+            <engine:Label name="Tittle" xml:id="Tittle" class="Tittle"/>
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" xml:id="Body" class="Body">
+            <engine:VisualElement name="TextPanel" xml:id="TextPanel" class="TextPanel">
+                <engine:Label text="Artillery" name="Message" xml:id="Message" class="Message" />
+            </engine:VisualElement>
+            <engine:VisualElement name="ButtonsPanel" xml:id="ButtonsPanel" class="ButtonsPanel">
+                <engine:Button text="Launch" name="Launch" xml:id="Launch" class="Launch"  />
+                <engine:Button text="Exit" name="Exit" xml:id="Exit" class="Exit"  />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" xml:id="Footer" class="Footer">
+            <engine:Label text="raulCoder09 Developer" name="GeneralInformation" xml:id="GeneralInformation" class="GeneralInformation" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

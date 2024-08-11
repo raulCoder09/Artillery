@@ -1,0 +1,22 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/GameOver/GameOver.uss?fileID=7433441132597879392&amp;guid=33f08109b601b490c9271b22f71d237f&amp;type=3#GameOver" />
+    <engine:VisualElement name="Container" xml:id="Container" class="Container" >
+        <engine:VisualElement name="Header" xml:id="Header" class="Header">
+            <engine:VisualElement name="Logo" xml:id="Logo" class="Logo"/>
+            <engine:Label text="Your score: 0" name="FinalScore" xml:id="FinalScore" class="FinalScore" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" xml:id="Body" class="Body" >
+            <engine:VisualElement name="TextPanel" xml:id="TextPanel" class="TextPanel" >
+                <engine:Label text="Game Over" name="Tittle" xml:id="Tittle" class="Tittle"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="ButtonsPanel" xml:id="ButtonsPanel" class="ButtonsPanel" >
+                <engine:Button text="Play again" name="PlayAgain" xml:id="PlayAgain" class="PlayAgain"/>
+                <engine:Button text="Levels menu" name="LevelsMenu" xml:id="LevelsMenu" class="LevelsMenu"/>
+                <engine:Button text="Exit" name="Exit" xml:id="Exit" class="Exit"/>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" xml:id="Footer" class="Footer" >
+            <engine:Label text="raulCoder09 Developer" name="GeneralInformation" xml:id="GeneralInformation" class="GeneralInformation"/>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

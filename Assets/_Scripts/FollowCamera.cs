@@ -1,3 +1,4 @@
+using _Scripts;
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour

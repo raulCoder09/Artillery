@@ -1,0 +1,85 @@
+.Container
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.Header
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 10%;
+}
+.Tittle
+{
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+}
+.Body
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.LevelsPanel
+{
+    flex-grow: 1;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    height: 80%;
+}
+.LevelsButton
+{
+    width: 10%;
+    height: 20%;
+}
+.ButtonsPanel
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+    align-content: center;
+}
+.Welcome
+{
+    width: 20%;
+    height: 60%;
+}
+.Options
+{
+    width: 20%;
+    height: 60%;
+}
+.Exit
+{
+    width: 20%;
+    height: 60%;
+}
+.Footer
+{
+    flex-grow: 1;
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+    align-content: center;
+} 
+
+
+

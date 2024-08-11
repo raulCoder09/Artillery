@@ -1,0 +1,16 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Winner/Winner.uss?fileID=7433441132597879392&amp;guid=787ba4b189ba34671bbfcf7c4acf6ddf&amp;type=3#Winner" />
+    <engine:VisualElement name="Container" xml:id="Container" class="Container">
+        <engine:VisualElement name="Header" xml:id="Header" class="Header" >
+            <engine:Label text="Your score: 0" name="Score" xml:id="Score" class="Score" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" xml:id="Body" class="Body">
+            <engine:Label text="You win!!!" name="Message" xml:id="Message" class="Message" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" xml:id="Footer" class="Footer">
+            <engine:Button text="Next level" name="NextLevel" xml:id="NextLevel" class="NextLevel"/>
+            <engine:Button text="Levels menu" name="LevelsMenu" xml:id="LevelsMenu" class="LevelsMenu"/>
+            <engine:Button text="Exit" name="Exit" xml:id="Exit" class="Exit" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

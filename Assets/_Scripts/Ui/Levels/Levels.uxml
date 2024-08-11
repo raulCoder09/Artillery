@@ -1,0 +1,23 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Levels/Levels.uss?fileID=7433441132597879392&amp;guid=540d96dce105d41c39fb16d323f8368d&amp;type=3#Levels" />
+    <engine:VisualElement name="Container" xml:id="Container" class="Container" >
+        <engine:VisualElement name="Header" xml:id="Header" class="Header" >
+            <engine:Label  name="Tittle" xml:id="Tittle" class="Tittle" text="Levels"/>
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" xml:id="Body" class="Body" >
+            <engine:VisualElement name="LevelsPanel" xml:id="LevelsPanel" class="LevelsPanel">
+                <engine:Button name="Level1" xml:id="Level1" class="LevelsButton" text="Level 1"/>
+                <engine:Button name="Level2" xml:id="Level2" class="LevelsButton" enabled="false" text="Level 2" />
+                <engine:Button name="Level3" xml:id="Level3" class="LevelsButton" enabled="false" text="Level 3"/>
+                <engine:Button name="Level4" xml:id="Level4" class="LevelsButton" enabled="false" text="Level 4"/>
+                <engine:Button name="Level5" xml:id="Level5" class="LevelsButton" enabled="false" text="Level 5"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="ButtonsPanel" xml:id="ButtonsPanel" class="ButtonsPanel" >
+                <engine:Button name="Welcome" xml:id="Welcome" class="Welcome" text="Welcome"  />
+                <engine:Button name="Options" xml:id="Options" class="Options" text="Options"/>
+                <engine:Button name="Exit" xml:id="Exit" class="Exit" text="Exit" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" xml:id="Footer" class="Footer" />
+    </engine:VisualElement>
+</engine:UXML>

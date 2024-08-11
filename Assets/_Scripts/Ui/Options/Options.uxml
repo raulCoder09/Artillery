@@ -1,0 +1,15 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Scripts/Ui/Options/Options.uss?fileID=7433441132597879392&amp;guid=7a02087e2fc7047bfbc7e5a82d05f98c&amp;type=3#Options" />
+    <engine:VisualElement name="Container" id="Container" class="Container">
+        <engine:VisualElement name="Header" id="Header" class="Header">
+            <engine:Label name="Tittle" id="Tittle" text="Options" class="Tittle" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Body" id="Body" class="Body">
+            <engine:DropdownField name="Mode" id="Mode" choices="Easy,Normal,Hard" value="Normal" class="Mode" />
+            <engine:Slider name="Speed" id="Speed" value="25" high-value="28" fill="true" show-input-field="false" class="Speed" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Footer" id="Footer" class="Footer">
+            <engine:Button name="Back" id="Back" text="Back" class="Back" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

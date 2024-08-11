@@ -6,22 +6,41 @@ namespace _Scripts
 {
     public class Target : MonoBehaviour
     {
-        [SerializeField]private int life = 10;
+        [SerializeField] private GameObject burstParticle;
+        private static int _life;
+        internal static int Life
+        {
+            get => _life;
+            set => _life = value;
+        }
         private void OnTriggerEnter(Collider collision)
         {
             if (collision.CompareTag("Burst"))
             {
-                life--;
+                _life--;
                 
             }else if (collision.CompareTag("SpecialBurst"))
             {
-                life -= 3;
+                _life -= 3;
             }
-            if (life<=0)
+            if (_life<=0)
             {
                 Destroy(gameObject);
             }
-            
+        }
+        private void Update()
+        {
+            CheckTargetOutRange();
+        }
+
+        private void CheckTargetOutRange()
+        {
+            if (gameObject.transform.position.y < -25)
+            {
+                _life = 0;
+                Instantiate(burstParticle, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 }
