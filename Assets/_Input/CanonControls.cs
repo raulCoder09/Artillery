@@ -63,15 +63,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Nintendo"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""6f5c14ff-7ded-4b0e-8eb5-308b815d3603"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -210,7 +201,7 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""8d48b725-797c-4dea-b8e9-ca9974547151"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -221,7 +212,7 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""93386dca-4138-49b7-8d4a-746d27e52c45"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -283,61 +274,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""b9b7ca03-d2a7-4b1f-aaa6-0df18cf102c3"",
-                    ""path"": ""2DVector(mode=2)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nintendo"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Up"",
-                    ""id"": ""b33c6f02-2294-48ad-979b-57497fb848f5"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nintendo"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Down"",
-                    ""id"": ""46f4824d-43cb-4517-9952-8e108e75fe1f"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nintendo"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Left"",
-                    ""id"": ""cc7f7904-6c61-499e-84f3-13c22a4270fe"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nintendo"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Right"",
-                    ""id"": ""c9fca6d9-4026-40a1-a66e-6795a7d7afa3"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Nintendo"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -367,7 +303,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
         m_Cannon_Shoot = m_Cannon.FindAction("Shoot", throwIfNotFound: true);
         m_Cannon_ModifyPower = m_Cannon.FindAction("ModifyPower", throwIfNotFound: true);
         m_Cannon_Move = m_Cannon.FindAction("Move", throwIfNotFound: true);
-        m_Cannon_Nintendo = m_Cannon.FindAction("Nintendo", throwIfNotFound: true);
     }
 
     ~@CanonControls()
@@ -438,7 +373,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Cannon_Shoot;
     private readonly InputAction m_Cannon_ModifyPower;
     private readonly InputAction m_Cannon_Move;
-    private readonly InputAction m_Cannon_Nintendo;
     public struct CannonActions
     {
         private @CanonControls m_Wrapper;
@@ -447,7 +381,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Cannon_Shoot;
         public InputAction @ModifyPower => m_Wrapper.m_Cannon_ModifyPower;
         public InputAction @Move => m_Wrapper.m_Cannon_Move;
-        public InputAction @Nintendo => m_Wrapper.m_Cannon_Nintendo;
         public InputActionMap Get() { return m_Wrapper.m_Cannon; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -469,9 +402,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Nintendo.started += instance.OnNintendo;
-            @Nintendo.performed += instance.OnNintendo;
-            @Nintendo.canceled += instance.OnNintendo;
         }
 
         private void UnregisterCallbacks(ICannonActions instance)
@@ -488,9 +418,6 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Nintendo.started -= instance.OnNintendo;
-            @Nintendo.performed -= instance.OnNintendo;
-            @Nintendo.canceled -= instance.OnNintendo;
         }
 
         public void RemoveCallbacks(ICannonActions instance)
@@ -523,6 +450,5 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnModifyPower(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
-        void OnNintendo(InputAction.CallbackContext context);
     }
 }

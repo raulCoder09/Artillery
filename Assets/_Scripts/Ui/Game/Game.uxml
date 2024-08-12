@@ -18,7 +18,7 @@
         </engine:VisualElement>
         <engine:VisualElement name="Footer" id="Footer" class="Footer">
             <engine:VisualElement name="PowerCannonPanel" class="PowerCannonPanel">
-                <engine:SliderInt name="PowerCannon" high-value="30" low-value="5" value="15" class="PowerCannon" />
+                <engine:SliderInt name="PowerCannon" high-value="30" low-value="1" enabled="false" class="PowerCannon" style="opacity: 1;" />
             </engine:VisualElement>
             <engine:VisualElement name="LevelPanel" class="LevelPanel">
                 <engine:Label name="Level" text="Level : 1" class="Level" />

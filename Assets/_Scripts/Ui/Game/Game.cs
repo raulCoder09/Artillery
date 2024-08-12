@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -22,9 +21,12 @@ namespace _Scripts.Ui.Game
         {
             Hide();
         }
+        
+        
         private void Update()
         {
             if (!_uiActive) return;
+            _root.Q<SliderInt>("PowerCannon").value = (int)98.0f;
             _root.Q<Label>("ShotsAvailable").style.color = GameManager.ShootsByGame<=2 ? Color.red : Color.green;
             _root.Q<Label>("ShotsAvailable").text = $"Shots Available: {GameManager.ShootsByGame}";
             _root.Q<Label>("PowerEnemy").text = $"Power enemy : {Target.Life}";
@@ -58,16 +60,6 @@ namespace _Scripts.Ui.Game
                 if (buttonMenu!=null)
                 {
                     buttonMenu.clicked += ShowPauseAndMenu;
-                }
-                
-                var powerCannon  = _root.Q<SliderInt>("PowerCannon");
-                if (powerCannon!=null)
-                {
-                    powerCannon.RegisterValueChangedCallback(evt =>
-                    {
-                        GameManager.SpeedBall = evt.newValue;
-                        print(GameManager.SpeedBall);
-                    });
                 }
             }
         }

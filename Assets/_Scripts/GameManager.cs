@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace _Scripts
@@ -7,8 +6,8 @@ namespace _Scripts
     {
         public static GameManager gameManager;
 
-        private static int _speedBall=30;
-        internal static int SpeedBall
+        private static float _speedBall=.25f;
+        internal static float SpeedBall
         {
             get => _speedBall;
             set => _speedBall = value;
@@ -22,7 +21,12 @@ namespace _Scripts
         }
     
 
-        public static float speedRotation=1f;
+        private static float _speedRotation=1f;
+        internal static float SpeedRotation
+        {
+            get => _speedRotation;
+            set => _speedRotation = value;
+        }
         internal static int LevelNumber;
     
         private void Awake()
