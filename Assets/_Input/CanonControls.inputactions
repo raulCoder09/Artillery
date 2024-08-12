@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Nintendo",
+                    "type": "PassThrough",
+                    "id": "6f5c14ff-7ded-4b0e-8eb5-308b815d3603",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -249,6 +258,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "b9b7ca03-d2a7-4b1f-aaa6-0df18cf102c3",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nintendo",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "b33c6f02-2294-48ad-979b-57497fb848f5",
+                    "path": "<SwitchProControllerHID>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nintendo",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "46f4824d-43cb-4517-9952-8e108e75fe1f",
+                    "path": "<SwitchProControllerHID>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nintendo",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "cc7f7904-6c61-499e-84f3-13c22a4270fe",
+                    "path": "<SwitchProControllerHID>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nintendo",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "c9fca6d9-4026-40a1-a66e-6795a7d7afa3",
+                    "path": "<SwitchProControllerHID>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nintendo",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
